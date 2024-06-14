@@ -1,0 +1,12 @@
+{
+  "name": "mew.js",
+  "version": "1.0.0",
+  "description": "a bot that replaces words",
+  "main": "index.js",
+  "author": "bigrat",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.15.3",
+    "sqlite3": "^5.1.7"
+  }
+}

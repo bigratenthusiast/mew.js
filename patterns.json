@@ -1,0 +1,30 @@
+{
+    "allmaybe": {
+        "pattern": "(\\byes\\b)|(\\bno\\b)|(\\byep\\b)|(\\byeah\\b)|(\\bsure\\b)",
+        "substitute": "maybe", 
+        "chance":0.6
+    },
+    "frommaybe": {
+        "pattern": "\\bmaybe\\b",
+        "substitutes": [ {"substitute": "yes", "share": 0.5}, {"substitute": "no", "share": 0.5} ],
+        "chance": 0.8
+    },
+	"up":{
+        "word":"^",
+        "opposite":"—>",
+        "bounded": false,
+        "chance": 0.85
+    },
+    "album_playlist":{
+        "word":"album",
+        "opposite":"playlist",
+        "unidirectional": true
+    },
+    "number": {"pattern": "\\b\\d\\b", "special": true, "chance": 0.9, "eval": "zip(''+ (parseInt(match) + (Math.round(Math.random()) * 2 - 1)))"},
+    "url": {
+        "pattern": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)",
+        "special": true,
+        "chance": 1.0, 
+        "eval": "zip(''+match)"
+    }
+}
